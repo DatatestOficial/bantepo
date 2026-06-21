@@ -1,0 +1,11 @@
+Base.xlsx
+enviar_base.exe
+bantepo/Base.xlsx
+enviar_base.exe
+build
+dist
+venv
+.streamlit
+enviar_base.spec
+enviar_base.py
+__pycache__/
