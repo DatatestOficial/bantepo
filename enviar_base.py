@@ -3,7 +3,8 @@ import glob
 from supabase import create_client, Client
 import pandas as pd
 import json
-# librerias openpyxl pandas supabase pyinstaller
+# Eliminar
+# librerias openpyxl pandas supabase pyinstaller 
 # pyinstaller --onefile --clean --exclude-module=unittest --exclude-module=pydoc enviar_base.py
 
 
