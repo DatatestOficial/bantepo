@@ -1,13 +1,14 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 
+def to_plain_dict(obj):
+    if hasattr(obj, "items"):
+        return {k: to_plain_dict(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [to_plain_dict(x) for x in obj]
+    return obj
+
 def get_authenticator():
-    def to_plain_dict(obj):
-        if hasattr(obj, "items"):
-            return {k: to_plain_dict(v) for k, v in obj.items()}
-        elif isinstance(obj, list):
-            return [to_plain_dict(x) for x in obj]
-        return obj
     # 1. Cargar las credenciales y configuración desde los secretos
     credenciales = to_plain_dict(st.secrets["auth"]["credentials"])
     cookie_config = to_plain_dict(st.secrets["auth"]["cookie"])

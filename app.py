@@ -35,5 +35,5 @@ elif st.session_state.get("authentication_status") is False:
     st.error("❌ Usuario o contraseña incorrectos")
 
 elif st.session_state.get("authentication_status") is None:
-    st.info("🔐 Bienvenido al tablero de seguimiento del proceso de actualización")
+    st.info("🔐 Bienvenido al consultador")
 
